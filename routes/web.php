@@ -23,14 +23,17 @@ Route::get('login', function () {
     return 'Login';
 });
 
-Route::get('/clientes', function () {
-    return 'Clientes';
-});
+Route::prefix('app')->group(function () {
 
-Route::get('/fornecedores', function () {
-    return 'fornecedores';
-});
+    Route::get('/clientes', function () {
+        return 'Clientes';
+    });
 
-Route::get('/produtos', function () {
-    return 'Produtos';
+    Route::get('/fornecedores', function () {
+        return 'fornecedores';
+    });
+
+    Route::get('/produtos', function () {
+        return 'Produtos';
+    });
 });
