@@ -37,3 +37,8 @@ Route::prefix('app')->group(function () {
         return 'Produtos';
     })->name('app.produtos');
 });
+
+
+Route::fallback(function () {
+    echo 'Essa página não existe <a href="'.route('site.index').'">clique aqui</a> para ser redirecionado para a página inicial';
+});
