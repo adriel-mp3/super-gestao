@@ -1,6 +1,6 @@
 @extends('site.layouts.basico')
 
-@section('content')
+@section('conteudo')
     <div class="topo">
 
         <div class="logo">
