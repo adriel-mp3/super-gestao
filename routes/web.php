@@ -18,6 +18,7 @@ Route::get('/', 'PrincipalController@principal')->name('site.index');
 Route::get('/sobre-nos', 'SobreNosController@sobre')->name('site.sobrenos');
 
 Route::get('/contato', 'ContatoController@contato')->name('site.contato');
+Route::post('/contato', 'ContatoController@contato')->name('site.contato');
 
 Route::get('login', function () {
     return 'Login';
@@ -36,6 +37,7 @@ Route::prefix('app')->group(function () {
     })->name('app.produtos');
 });
 
+Route::get('/teste','TesteController@teste')->name('teste');
 
 Route::fallback(function () {
     echo 'Essa página não existe <a href="'.route('site.index').'">clique aqui</a> para ser redirecionado para a página inicial';
