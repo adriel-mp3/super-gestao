@@ -8,4 +8,5 @@ class Fornecedor extends Model
 {
     // change default Eloquent table name fornecedors to:
     protected $table = 'fornecedores';
+    protected $fillable = ['nome', 'site', 'uf', 'email'];
 }
